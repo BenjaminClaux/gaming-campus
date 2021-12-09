@@ -168,25 +168,37 @@ h4 {
 .pre-footer img {
   margin-left: 110px;
   margin-right: 110px;
+  margin-top: 20%;
 }
 #infos {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   width: 30%;
+  margin-top: 5%;
 }
 #parents {
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   width: 30%;
+  margin-top: 5%;
 }
 #contact {
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin-top: 5%;
+}
+#i {
+  display: inline-block;
+  justify-content: space-around;
 }
 .un {
   display: flex;
   margin-top: 10%;
+  margin-left: 125px;
+  margin-right: 120px;
   justify-content: space-between;
 }
 .nous {
@@ -201,6 +213,7 @@ h4 {
 
 footer {
   background: black;
+  padding: 10px;
 }
 footer h3 {
   color: white;
