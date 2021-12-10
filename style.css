@@ -110,22 +110,32 @@ h4 {
 }
 .campus {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 #news {
   margin-bottom: 15px;
 }
 #btnnews {
+  display: block;
+  text-align: right;
   color: black;
   border: black 3px solid;
-  margin-bottom: 50px;
+  margin: 0 0 0 auto;
 }
 .news {
   display: flex;
   justify-content: space-between;
 }
+.news > div {
+  position: relative;
+  padding-bottom: 50px;
+  width: 25%;
+}
 .news img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 .news button {
   color: black;
@@ -134,26 +144,20 @@ h4 {
 .news h3 {
   color: black;
   text-align: left;
-  max-width: 255px;
   margin: 15px auto;
 }
 .news p {
   color: black;
   text-align: left;
-  max-width: 255px;
   margin: 0 auto;
+  line-height: 25px;
 }
 .news button {
-  margin-top: 40px;
-}
-#inscr {
-  transform: translateY(-50%);
-  text-align: left;
-}
-#suite {
   position: absolute;
-  margin-top: 96px;
-  transform: translateY(-50%);
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 0;
 }
 .news img {
   filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.082));
@@ -209,6 +213,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   width: 70%;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -224,4 +229,37 @@ footer ul {
   justify-content: space-around;
   align-items: center;
   padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  nav {
+    display: none;
+  }
+  .logos {
+    flex-direction: column;
+  }
+  .campus {
+    flex-direction: column;
+  }
+  .campus h2 {
+    text-align: center;
+  }
+  .campus p {
+  }
+  #btnnews {
+    margin: auto 0 0 0;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .news img {
+    display: block;
+    margin: 0 auto;
+  }
+  .pre-footer {
+    display: none;
+  }
 }
